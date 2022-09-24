@@ -23,18 +23,20 @@ func apply_force(dir):
 func _ready():
 	pass
 
-func _draw():
-	draw_line(Vector2.ZERO, 200*transform.x,Color.purple, 10)
+#func _draw():
+#	draw_line(Vector2.ZERO, 200*transform.x,Color.purple, 10)
 
 
 func _input(event):
 	if event.is_action("hoist_in"):
-		current_max_angle -= 5
-		current_max_angle = max(current_max_angle, 0)
+		rotation_degrees -= 5
+#		current_max_angle -= 5
+#		current_max_angle = max(current_max_angle, 0)
 
 	elif event.is_action("hoist_out"):
-		current_max_angle += 5
-		current_max_angle = min(current_max_angle, max_angle)
+		rotation_degrees += 5
+#		current_max_angle += 5
+#		current_max_angle = min(current_max_angle, max_angle)
 
 
 #func _process(delta):
