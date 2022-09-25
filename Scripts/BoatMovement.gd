@@ -27,7 +27,7 @@ func velocity(boat_angle:float, true_wind_angle:float, dead_angle:float = PI/12)
 	return acceleration * velocity
 
 func _process(delta):
-	var true_wind: float = 0.0
+	var true_wind: float = 90.0#sim.get_wind(global_position)
 	var boat_angle: float = global_transform.x.angle_to(Vector2.UP)
 
 	var velocity = min(velocity(boat_angle, true_wind),MAX_SPEED)

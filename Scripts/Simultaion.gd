@@ -41,7 +41,7 @@ func _ready():
 		for y in range(grid_size.y):
 			var abs_pos = Vector2(x,y)*grid_resolution
 			p.append(origin + abs_pos)
-			var angle = 0.5*PI
+			var angle = PI
 #			var angle = 2*PI*noise.get_noise_2d(x,y)
 			v.append(unit_vector(angle))
 			
@@ -68,7 +68,7 @@ func _draw():
 	for x in range(grid_size.x):
 		for y in range(grid_size.y):
 			var pos = grid_positions[x][y]
-			var angle = 0.5*PI
+			var angle = PI
 #			var angle = 2*PI*noise.get_noise_2d(x+noise_offset.x,y+noise_offset.y)
 			
 			var vec = unit_vector(angle) * vector_size.x
